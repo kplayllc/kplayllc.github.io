@@ -1,0 +1,14 @@
+# Python / PyCharm
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local secrets (never put secrets into a public repository)
+.env
+*.key

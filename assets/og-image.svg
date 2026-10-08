@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+ <rect width="1200" height="630" fill="#090d14"/>
+ <circle cx="1050" cy="280" r="300" fill="#18302a" opacity=".6"/>
+ <rect x="95" y="85" width="74" height="74" rx="3" fill="none" stroke="#c5ff7b" stroke-width="3"/>
+ <text x="132" y="144" fill="#c5ff7b" font-size="57" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold">K</text>
+ <text x="200" y="136" fill="#f1f4ef" font-size="37" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="7">KPLAY LLC</text>
+ <text x="94" y="325" fill="#f1f4ef" font-size="70" font-family="Arial,sans-serif" font-weight="bold">Ideas become models.</text>
+ <text x="94" y="414" fill="#c5ff7b" font-size="70" font-family="Arial,sans-serif" font-weight="bold">Models become systems.</text>
+ <text x="99" y="498" fill="#93a6a1" font-size="25" font-family="Arial,sans-serif">QUANTITATIVE RESEARCH  /  PRIVATE INVESTMENT</text>
+</svg>
