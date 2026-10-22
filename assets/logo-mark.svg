@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" role="img" aria-label="Kplay orbital ribbon mark"><defs>
+  <linearGradient id="ribbonA" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#A8E9FC"/><stop offset=".38" stop-color="#4188BB"/><stop offset="1" stop-color="#092E58"/></linearGradient>
+  <linearGradient id="ribbonB" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#19558F"/><stop offset=".52" stop-color="#65CADF"/><stop offset="1" stop-color="#B3F6FF"/></linearGradient>
+  <linearGradient id="orbitLine" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#58B0D1"/><stop offset=".52" stop-color="#C9F8FF"/><stop offset="1" stop-color="#4789D4"/></linearGradient>
+  <radialGradient id="node"><stop stop-color="#F5FCFF"/><stop offset=".6" stop-color="#C3F3FF"/><stop offset="1" stop-color="#6CC3E8"/></radialGradient>
+</defs><!-- One canonical Kplay orbital-ribbon mark: edit here and regenerate all size variants. -->
+<path d="M 28 121 C 24 78, 50 39, 91 34 C 117 31, 143 45, 156 65 L 136 86 C 110 54, 87 59, 72 72 C 56 86, 51 113, 58 144 C 64 168, 78 180, 89 183 C 53 179, 30 158, 28 121 Z" fill="url(#ribbonA)"/>
+<path d="M 66 111 C 94 115, 117 154, 149 160 C 162 163, 174 158, 184 147 C 174 174, 160 187, 141 188 C 111 183, 91 138, 66 111 Z" fill="url(#ribbonB)"/>
+<path d="M 36 180 L 173 35" fill="none" stroke="url(#orbitLine)" stroke-width="2.6" stroke-linecap="round"/>
+<circle cx="172" cy="36" r="11" fill="url(#node)"/>
+<circle cx="63" cy="151" r="6.3" fill="url(#node)"/></svg>

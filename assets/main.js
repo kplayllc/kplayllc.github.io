@@ -1,49 +1,44 @@
-/* Progressive enhancements only: the page works without JavaScript. */
+// Progressive enhancement: navigation and content remain usable without JavaScript.
 document.documentElement.classList.add('js');
 
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
 
 const toggle = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('.site-nav');
+const nav = document.querySelector('.site-nav');
 
 function closeMenu() {
-  if (!toggle || !navigation) return;
+  if (!toggle || !nav) return;
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-label', 'Open navigation');
-  navigation.classList.remove('is-open');
+  nav.classList.remove('is-open');
 }
 
-if (toggle && navigation) {
+if (toggle && nav) {
   toggle.addEventListener('click', () => {
-    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!isOpen));
-    toggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-    navigation.classList.toggle('is-open', !isOpen);
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    toggle.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+    nav.classList.toggle('is-open', !open);
   });
-
-  navigation.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeMenu();
-  });
-
-  window.matchMedia('(min-width: 601px)').addEventListener('change', closeMenu);
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+  const desktop = window.matchMedia('(min-width: 801px)');
+  if (desktop.addEventListener) desktop.addEventListener('change', closeMenu);
 }
 
-const revealItems = document.querySelectorAll('[data-reveal]');
-if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+const items = document.querySelectorAll('[data-reveal]');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if ('IntersectionObserver' in window && !reducedMotion) {
   const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
+    for (const entry of entries) {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
         obs.unobserve(entry.target);
       }
-    });
-  }, { threshold: 0.10, rootMargin: '0px 0px 40px 0px' });
-  revealItems.forEach(element => observer.observe(element));
+    }
+  }, { threshold: .06, rootMargin: '0px 0px 70px 0px' });
+  items.forEach(node => observer.observe(node));
 } else {
-  revealItems.forEach(element => element.classList.add('is-visible'));
+  items.forEach(node => node.classList.add('is-visible'));
 }

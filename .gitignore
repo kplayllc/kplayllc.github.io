@@ -9,6 +9,14 @@ venv/
 .DS_Store
 Thumbs.db
 
-# Local secrets (never put secrets into a public repository)
+# Local secrets and trading files
 .env
 *.key
+*.pem
+*.p12
+*.pfx
+credentials*.json
+private_data/
+
+# Local deployment archives
+*.zip
